@@ -2167,7 +2167,7 @@ class Data {
         sugars: json["sugars"]?.toDouble(),
         sugarsPoints: json["sugars_points"],
         sugarsValue: json["sugars_value"]?.toDouble(),
-        grade: ecoscoreGradeValues.map[json["grade"]]!,
+        grade: ecoscoreGradeValues.map[json["grade"]],
         score: json["score"],
         components: json["components"] == null ? null : Components.fromJson(json["components"]),
         countProteins: json["count_proteins"],
