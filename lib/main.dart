@@ -4,7 +4,7 @@ import 'package:foodfinder/Screens/ProductFInder.dart';
 import 'package:get/get.dart';
 
 void main() {
-  runApp(GetMaterialApp(home: const ProductFinder(),
+  runApp(GetMaterialApp(home:  ProductFinder(),
     initialBinding: BindingsBuilder(() {
         Get.put(FoodController());
       }),

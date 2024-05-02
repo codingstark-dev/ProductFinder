@@ -9,14 +9,23 @@ class FoodController extends GetxController {
 
   @override
   void onInit() {
-    fetchFoodFact();
+    fetchFoodFact(
+      barcode: '8901719128462',
+    );
     super.onInit();
   }
 
-  void fetchFoodFact() async {
+  void fetchFoodFact(
+    {
+      required String? barcode,
+    
+    }
+  ) async {
     try {
       isLoading(true);
-      var food = await ApiCall.getOpenFoodFact();
+      var food = await ApiCall.getOpenFoodFact(
+        barcode: barcode,
+      );
       foodFact(food);
         } finally {
       isLoading(false);
